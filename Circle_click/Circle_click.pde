@@ -12,21 +12,16 @@ float pressedX, pressedY;
 void draw(){
   background(255);
   
-  fill(0, 0, 0);
+  fill(255, 255, 255);
   ellipse(ex, ey ,r*2, r*2);
-
-  if((mouseX - ex)*(mouseX - ex) + (mouseY - ey)*(mouseY - ey) < r*r){
-    click = true;
-  } 
-  if(click == false){
-    ex = ex;
-    ey = ey;
-  }
 }
 
 void mousePressed(){
     pressedX = ex - mouseX;
     pressedY = ey - mouseY;
+    if((pressedX*pressedX) + (pressedY*pressedY) < r*r){
+      click = true;
+    } 
 }
   
 void mouseDragged(){
@@ -49,12 +44,3 @@ void mouseDragged(){
 void mouseReleased(){
   click = false;
 }
-
-
-//void mouseDragged(){
-//  if(click == true){
-//    ex = mouseX;
-//    ey = mouseY;
-//    blue = 255;
-//  } 
-//}
