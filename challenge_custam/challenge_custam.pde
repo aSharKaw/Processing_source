@@ -47,6 +47,7 @@ int P_red = 255, P_green = 0, P_blue = 255;
 int alpha = 150;
 
 int Piano_x = 10;
+
 int C_color = 255;
 int D_color = 255;
 int E_color = 255;
